@@ -3,15 +3,19 @@ package Day2.BitManipulations;
 import java.util.Scanner;
 
 public class GetSetClear {
+    
     static boolean GetBit(int n, int i){
-        return ((n&(1<<i))!=0);
+        int pos = i-1;
+        return ((n&(1<<pos))!=0);
     }
     static int SetBit(int n, int i){
-        return (n|(1<<i));
+        int pos = i-1;
+        return (n|(1<<pos));
         
     }
     static int ClearBit(int n, int i){
-        return (n&(~(1<<i)));
+        int pos = i-1;
+        return (n&(~(1<<pos)));
         
     }
     public static void main(String[] args) {
